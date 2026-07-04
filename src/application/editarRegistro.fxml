@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" spacing="35.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="190.0" prefWidth="1280.0" text="Editar Datos del Registro" textFill="#093c5d">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="1280.0" spacing="20.0">
+         <children>
+            <Label alignment="TOP_RIGHT" prefWidth="110.0" text="Nombre" textAlignment="RIGHT" textFill="#3b7597">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="modNombreCliente" prefHeight="0.0" prefWidth="224.0" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 10 15 10 15: 1;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="79.0" text="Cédula" textAlignment="RIGHT" textFill="#3b7597">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="modCedula" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 10 15 10 15: 1;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER_RIGHT" prefWidth="110.0" text="Telefono" textAlignment="RIGHT" textFill="#3b7597">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="modTelefono" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 10 15 10 15: 1;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="396.0" prefHeight="90.0" prefWidth="1280.0" spacing="20.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="173.0" text="Marca / Modelo" textAlignment="RIGHT" textFill="#3b7597">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="modMarcaM" prefHeight="39.0" prefWidth="283.0" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 10 15 10 15: 1;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="173.0" text="Serial" textAlignment="RIGHT" textFill="#3b7597">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="modSerial" prefHeight="39.0" prefWidth="283.0" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 10 15 10 15: 1;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="72.0" prefWidth="1280.0" spacing="30.0">
+         <children>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefWidth="160.0" text="Tipo de Equipo" textFill="#093c5d">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="modTipoEquipo" prefHeight="42.0" prefWidth="237.0" promptText="Seleccione" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-padding: 5 15 5 15: 1;" />
+            <CheckBox fx:id="modCargador" mnemonicParsing="false" text="¿Ingresa con Cargador?" textFill="#093c5d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckBox>
+            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="466.0" spacing="20.0">
+               <children>
+                  <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="248.0" text="Guardar Información" textFill="#093c5d">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="modSi" mnemonicParsing="false" text="Si" textFill="#093c5d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupoPrioridad" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="modNo" mnemonicParsing="false" text="No" textFill="#093c5d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupoPrioridad" />
+                     </toggleGroup>
+                  </RadioButton>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="178.0" prefWidth="1280.0">
+         <children>
+            <VBox prefHeight="178.0" prefWidth="427.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="51.0" prefWidth="468.0" text="Razón de Revisión" textFill="#093c5d">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="modRevision" prefHeight="106.0" prefWidth="427.0" style="-fx-control-inner-background: #E6E3E3; -fx-border-radius: 15; -fx-border-color: transparent; -fx-text-fill: #093C5D; -fx-padding: 5: 1;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="20.0" prefWidth="1280.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="223.0" text="Observaciones" textFill="#093c5d">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="modObervaciones" prefHeight="39.0" prefWidth="246.0" promptText="Observaciones Físicas" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 10 20 10 20: 1;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="106.0" prefWidth="1280.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <Button fx:id="btnGuardarMod" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45: 1;" text="Guardar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="850.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" spacing="20.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1280.0" spacing="30.0" style="-fx-background-color: #E8E8E8;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="98.0" prefWidth="556.0" text="Seguimiento de Equipos" textFill="#093c5d">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtfieldBuscar" prefHeight="42.0" prefWidth="300.0" promptText="Busca un equipo" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 8 15 8 15: 1;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="1280.0" spacing="30.0">
+               <children>
+                  <CheckBox fx:id="checkPendientes" mnemonicParsing="false" text="Pendientes">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <CheckBox fx:id="checkRevision" mnemonicParsing="false" text="En Revisión">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <CheckBox fx:id="checkListos" mnemonicParsing="false" text="Listos!">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <TableView fx:id="tblVistaTabla" prefHeight="400.0" prefWidth="1100.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="idOrden" />
+                <TableColumn prefWidth="75.0" text="Cliente" />
+                  <TableColumn prefWidth="137.0" text="Marca / Modelo" />
+                  <TableColumn prefWidth="137.0" text="Serial" />
+                  <TableColumn prefWidth="137.0" text="Prioridad" />
+                  <TableColumn prefWidth="137.0" text="Razón de entrada" />
+                  <TableColumn prefWidth="137.0" text="Estado" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnModDatos" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45: 1;" text="Modificar Datos">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnEnRevision" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45: 1;" text="Poner en Revisión">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnListo" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45: 1;" text="Maracar como Listo">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnInicio" layoutX="797.0" layoutY="26.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 12 40 12 40: 1;" text="Inicio">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

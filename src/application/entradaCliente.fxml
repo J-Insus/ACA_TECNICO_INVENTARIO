@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" spacing="35.0">
+         <children>
+            <Label prefHeight="96.0" prefWidth="352.0" text="Datos del Cliente" textFill="#093c5d">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="1280.0" spacing="20.0">
+               <children>
+                  <Label alignment="TOP_RIGHT" prefWidth="110.0" text="Nombre" textAlignment="RIGHT" textFill="#3b7597">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtfieldNombreCliente" promptText="Nombre del Cliente" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 10 15 10 15: 1;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="370.0" prefHeight="0.0" prefWidth="1280.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="110.0" text="Cédula" textAlignment="RIGHT" textFill="#3b7597">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtfieldCedula" promptText="Cédula del Cliente" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 10 15 10 15: 1;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="438.0" prefHeight="15.0" prefWidth="1280.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="110.0" text="Telefono" textAlignment="RIGHT" textFill="#3b7597">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtfieldTelefono" promptText="Telefono del Cliente" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 10 15 10 15: 1;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <VBox prefHeight="39.0" prefWidth="1280.0" />
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1280.0" style="-fx-background-color: #E8E8E8;">
+               <children>
+                  <Button fx:id="btnDatosEquipo" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45: 1;" text="Siguiente">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="850.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
