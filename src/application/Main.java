@@ -29,6 +29,11 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
+		// 🔌 PRUEBA DE CONEXIÓN TEMPORAL (Puesta exactamente aquí)
+		System.out.println("🔄 Iniciando prueba de conexión con la base de datos...");
+		ConexionSQL.conectar(); 
+		
+		// Arranca la interfaz gráfica de JavaFX
 		launch(args);
 	}
 }

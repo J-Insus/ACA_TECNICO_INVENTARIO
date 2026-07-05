@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GestionEquiposController">
    <children>
       <VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" spacing="20.0">
          <children>
@@ -24,7 +24,7 @@
                         <Font name="System Bold" size="40.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtfieldBuscar" prefHeight="42.0" prefWidth="300.0" promptText="Busca un equipo" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 8 15 8 15: 1;">
+                  <TextField fx:id="txtfieldBuscar" prefHeight="42.0" prefWidth="300.0" promptText="Busca un equipo" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 8 15 8 15;;">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -75,22 +75,22 @@
             </TableView>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <Button fx:id="btnModDatos" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45: 1;" text="Modificar Datos">
+                  <Button fx:id="btnModDatos" mnemonicParsing="false" onAction="#irEditarRegistro" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Modificar Datos">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnEnRevision" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45: 1;" text="Poner en Revisión">
+                  <Button fx:id="btnEnRevision" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Poner en Revisión">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnListo" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45: 1;" text="Maracar como Listo">
+                  <Button fx:id="btnListo" mnemonicParsing="false" prefHeight="60.0" prefWidth="295.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Maracar como Listo">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnInicio" layoutX="797.0" layoutY="26.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 12 40 12 40: 1;" text="Inicio">
+                  <Button fx:id="btnInicio" layoutX="797.0" layoutY="26.0" mnemonicParsing="false" onAction="#irHome" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 12 40 12 40;" text="Inicio">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
