@@ -104,7 +104,7 @@ public class EditarRegistroController {
      * Guarda las modificaciones tanto del cliente como del equipo y vuelve al panel general
      */
     @FXML
-    private void guardarYVolverGestion(ActionEvent event) {
+    private void actualizarRegistro(ActionEvent event) {
         // Datos del cliente
         String nuevoNombre = modNombreCliente.getText().trim();
         String cedula = modCedula.getText().trim();

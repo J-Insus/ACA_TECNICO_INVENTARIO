@@ -29,7 +29,7 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#eliminarRegistro" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 12 40 12 40;" text="Eliminar">
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#eliminarRegistro" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #bf3838; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 12 40 12 40;" text="Eliminar" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -41,7 +41,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="51.0" prefWidth="1280.0" spacing="30.0">
                <children>
-                  <CheckBox fx:id="checkPendientes" mnemonicParsing="false" text="Pendientes">
+                  <CheckBox fx:id="checkPendientes" mnemonicParsing="false" text="Pendientes" textFill="#093c5d">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -49,7 +49,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </CheckBox>
-                  <CheckBox fx:id="checkRevision" mnemonicParsing="false" text="En Revisión">
+                  <CheckBox fx:id="checkRevision" mnemonicParsing="false" text="En Revisión" textFill="#093c5d">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -57,7 +57,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </CheckBox>
-                  <CheckBox fx:id="checkListos" mnemonicParsing="false" text="Listos!">
+                  <CheckBox fx:id="checkListos" mnemonicParsing="false" text="Listos!" textFill="#093c5d">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -80,24 +80,24 @@
                   <TableColumn fx:id="colRazon" prefWidth="137.0" text="Razon" />
               </columns>
             </TableView>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: #E8E8E8;">
                <children>
-                  <Button fx:id="btnModDatos" mnemonicParsing="false" onAction="#irEditarRegistro" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Modificar Datos">
+                  <Button fx:id="btnModDatos" mnemonicParsing="false" onAction="#irEditarRegistro" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;" text="Modificar Datos">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnEnRevision" mnemonicParsing="false" onAction="#cambiarAEnRevision" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Poner en Revisión">
+                  <Button fx:id="btnEnRevision" mnemonicParsing="false" onAction="#cambiarAEnRevision" prefHeight="60.0" prefWidth="264.0" style="-fx-background-color: #3B7597; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;" text="Poner en Revisión">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnListo" mnemonicParsing="false" onAction="#cambiarAListo" prefHeight="60.0" prefWidth="295.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Maracar como Listo">
+                  <Button fx:id="btnListo" mnemonicParsing="false" onAction="#cambiarAListo" prefHeight="60.0" prefWidth="278.0" style="-fx-background-color: #6FD1D7; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;" text="Maracar como Listo">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnInicio" layoutX="797.0" layoutY="26.0" mnemonicParsing="false" onAction="#irHome" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 12 40 12 40;" text="Inicio">
+                  <Button fx:id="btnInicio" layoutX="797.0" layoutY="26.0" mnemonicParsing="false" onAction="#irHome" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #177FE0; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 12 40 12 40;" text="Inicio">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

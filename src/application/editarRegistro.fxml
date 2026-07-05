@@ -16,7 +16,7 @@
 
 <VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" spacing="35.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditarRegistroController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="190.0" prefWidth="1280.0" text="Editar Datos del Registro" textFill="#093c5d">
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="347.0" prefWidth="1280.0" style="-fx-background-color: #E8E8E8;" text="Editar Datos del Registro" textFill="#093c5d">
          <font>
             <Font name="System Bold" size="44.0" />
          </font>
@@ -55,7 +55,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutX="10.0" layoutY="396.0" prefHeight="90.0" prefWidth="1280.0" spacing="20.0">
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="396.0" prefHeight="140.0" prefWidth="1280.0" spacing="20.0" style="-fx-background-color: #E8E8E8;">
          <children>
             <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="173.0" text="Marca / Modelo" textAlignment="RIGHT" textFill="#3b7597">
                <font>
@@ -128,16 +128,16 @@
             </HBox>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="178.0" prefWidth="1280.0">
+      <HBox alignment="CENTER" prefHeight="391.0" prefWidth="1280.0">
          <children>
             <VBox prefHeight="178.0" prefWidth="427.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="51.0" prefWidth="468.0" text="Razón de Revisión" textFill="#093c5d">
+                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="600.0" text="Razón de Revisión" textFill="#093c5d">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextArea fx:id="modRevision" prefHeight="106.0" prefWidth="427.0" style="-fx-control-inner-background: #E6E3E3; -fx-border-radius: 15; -fx-border-color: transparent; -fx-text-fill: #093C5D; -fx-padding: 5; -fx-background-radius: 10;" />
+                  <TextArea fx:id="modRevision" prefHeight="132.0" prefWidth="0.0" style="-fx-control-inner-background: #E6E3E3; -fx-border-radius: 15; -fx-border-color: transparent; -fx-text-fill: #093C5D; -fx-padding: 5; -fx-background-radius: 10;" />
                </children>
             </VBox>
          </children>
@@ -156,9 +156,9 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="106.0" prefWidth="1280.0" style="-fx-background-color: #E8E8E8;">
+      <HBox alignment="CENTER" prefHeight="328.0" prefWidth="1280.0" style="-fx-background-color: #E8E8E8;">
          <children>
-            <Button fx:id="btnGuardarMod" mnemonicParsing="false" onAction="#guardarYVolverGestion" prefHeight="60.0" prefWidth="189.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;" text="Guardar">
+            <Button fx:id="btnIngresarSis" mnemonicParsing="false" onAction="#actualizarRegistro" prefHeight="60.0" prefWidth="189.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;" text="Guardar">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

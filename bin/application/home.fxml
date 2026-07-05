@@ -2,21 +2,21 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
    <children>
       <VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" spacing="50.0">
          <children>
-            <Label text="FlowDesk" textFill="#093c5d">
-               <font>
-                  <Font name="System Bold" size="80.0" />
-               </font>
-            </Label>
+            <ImageView fitHeight="380.0" fitWidth="708.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@recursos/fondo%20cocn%20titulo.png" />
+               </image>
+            </ImageView>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
                <children>
                   <Button fx:id="btnNuevaEntrada" mnemonicParsing="false" onAction="#irNuevaEntrada" prefHeight="62.0" prefWidth="249.0" style="-fx-background-color: #093C5D; -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 15 40 15 40;" text="Nueva Entrada">
@@ -24,7 +24,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnGestionar" mnemonicParsing="false" onAction="#irGestionar" prefHeight="62.0" prefWidth="299.0" style="-fx-background-color: #5DF8D8; -fx-background-radius: 25; -fx-text-fill: #0B3D59; -fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 15 40 15 40;" text="Gestión de Equipos">
+                  <Button fx:id="btnGestionar" mnemonicParsing="false" onAction="#irGestionar" prefHeight="62.0" prefWidth="299.0" style="-fx-background-color: #177FE0; -fx-background-radius: 25; -fx-font-size: 22px; -fx-font-weight: bold; -fx-padding: 15 40 15 40;" text="Gestión de Equipos" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
