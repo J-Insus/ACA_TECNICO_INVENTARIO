@@ -64,13 +64,15 @@
             </HBox>
             <TableView fx:id="tblVistaTabla" prefHeight="400.0" prefWidth="1100.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="idOrden" />
-                <TableColumn prefWidth="75.0" text="Cliente" />
-                  <TableColumn prefWidth="137.0" text="Marca / Modelo" />
-                  <TableColumn prefWidth="137.0" text="Serial" />
-                  <TableColumn prefWidth="137.0" text="Prioridad" />
-                  <TableColumn prefWidth="137.0" text="Razón de entrada" />
-                  <TableColumn prefWidth="137.0" text="Estado" />
+                <TableColumn fx:id="colId" prefWidth="75.0" text="colId" />
+                <TableColumn fx:id="colNombre" prefWidth="75.0" text="Cliente" />
+                  <TableColumn fx:id="colMarca" prefWidth="137.0" text="Marca" />
+                  <TableColumn fx:id="colSerial" prefWidth="137.0" text="Serial" />
+                  <TableColumn fx:id="colTipo" prefWidth="137.0" text="Tipo" />
+                  <TableColumn fx:id="colEstado" prefWidth="137.0" text="Estado" />
+                  <TableColumn fx:id="colCargador" prefWidth="137.0" text="Cargador" />
+                  <TableColumn fx:id="colRespaldo" prefWidth="137.0" text="Respaldo" />
+                  <TableColumn fx:id="colRazon" prefWidth="137.0" text="Razon" />
               </columns>
             </TableView>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
@@ -80,12 +82,12 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnEnRevision" mnemonicParsing="false" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Poner en Revisión">
+                  <Button fx:id="btnEnRevision" mnemonicParsing="false" onAction="#cambiarAEnRevision" prefHeight="60.0" prefWidth="253.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Poner en Revisión">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnListo" mnemonicParsing="false" prefHeight="60.0" prefWidth="295.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Maracar como Listo">
+                  <Button fx:id="btnListo" mnemonicParsing="false" onAction="#cambiarAListo" prefHeight="60.0" prefWidth="295.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;;" text="Maracar como Listo">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

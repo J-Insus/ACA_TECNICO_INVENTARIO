@@ -41,6 +41,12 @@ public class EntradaClienteController {
          mostrarAlerta("Formato Incorrecto", "El campo Teléfono solo debe contener números. No se permiten letras ni espacios.", AlertType.WARNING);
          return; // Detiene la ejecución y no guarda nada en la BD
      }
+     
+  // 🔒 RESTRICCIÓN ADICIONAL: Verificar que la cédula solo contenga números
+     if (!cedula.matches("\\d+")) {
+         mostrarAlerta("Formato Incorrecto", "El campo Cédula solo debe contener números. No se permiten letras, guiones ni espacios.", AlertType.WARNING);
+         return; // Detiene la ejecución y evita procesar la solicitud
+     }
         
 
         // 3. Sentencia SQL relacional (Inserta o actualiza si ya existe)
