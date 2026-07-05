@@ -19,12 +19,12 @@
    <children>
       <VBox alignment="CENTER" layoutY="-6.0" prefHeight="720.0" prefWidth="1280.0" spacing="25.0">
          <children>
-            <Label prefHeight="98.0" prefWidth="352.0" text="Datos del Equipo" textFill="#093c5d">
+            <Label prefHeight="45.0" prefWidth="352.0" text="Datos del Equipo" textFill="#177fe0">
                <font>
                   <Font name="System Bold" size="44.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1280.0" spacing="20.0" style="-fx-background-color: #E8E8E8;">
+            <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1280.0" spacing="20.0">
                <children>
                   <Label alignment="TOP_RIGHT" prefWidth="160.0" text="Marca / Modelo" textFill="#093c5d">
                      <font>
@@ -54,7 +54,7 @@
                   <ComboBox fx:id="comboTipoEquipo" prefHeight="42.0" prefWidth="237.0" promptText="Seleccione" style="-fx-background-color: #E6E3E3; -fx-background-radius: 15; -fx-padding: 5 15 5 15;;" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="10.0" layoutY="365.0" prefHeight="7.0" prefWidth="1280.0" spacing="20.0">
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="365.0" prefHeight="19.0" prefWidth="1280.0" spacing="20.0" style="-fx-background-color: #E8E8E8;">
                <children>
                   <CheckBox fx:id="checkCargador" mnemonicParsing="false" text="¿Ingresa con Cargador?" textFill="#093c5d">
                      <font>
@@ -90,13 +90,13 @@
                   </RadioButton>
                </children>
                <padding>
-                  <Insets top="20.0" />
+                  <Insets bottom="20.0" top="20.0" />
                </padding>
             </HBox>
             <HBox alignment="CENTER" prefHeight="0.0" prefWidth="1280.0" spacing="30.0" />
-            <HBox alignment="CENTER" prefHeight="214.0" prefWidth="1280.0" style="-fx-background-color: #E8E8E8;">
+            <HBox alignment="CENTER" prefHeight="214.0" prefWidth="1280.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="197.0" prefWidth="539.0">
+                  <VBox alignment="CENTER" prefHeight="308.0" prefWidth="914.0">
                      <children>
                         <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="51.0" prefWidth="223.0" text="Razón de Revisión" textFill="#093c5d">
                            <font>
@@ -108,7 +108,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="73.0" prefWidth="1280.0">
+            <HBox alignment="CENTER" prefHeight="73.0" prefWidth="1280.0" style="-fx-background-color: #E8E8E8;">
                <children>
                   <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="223.0" text="Observaciones" textFill="#093c5d">
                      <font>
@@ -120,7 +120,7 @@
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="btnIngresarSis" mnemonicParsing="false" onAction="#guardarYVolverHome" prefHeight="60.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;" text="Guardar en Sistema">
+                  <Button fx:id="btnIngresarSis" mnemonicParsing="false" onAction="#guardarYVolverHome" prefHeight="60.0" style="-fx-background-color: #177FE0; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 12 45 12 45;" text="Guardar en Sistema">
                      <HBox.margin>
                         <Insets left="250.0" />
                      </HBox.margin>
