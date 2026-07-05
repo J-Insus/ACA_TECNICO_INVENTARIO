@@ -15,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -29,6 +30,7 @@ public class GestionEquiposController {
     @FXML private CheckBox checkRevision;
     @FXML private CheckBox checkListos;
     @FXML private TableView<OrdenServicio> tblVistaTabla;
+    @FXML private Button btnDelete;
 
     // COLUMNAS ACTUALIZADAS SEGÚN TUS NUEVOS REQUERIMIENTOS
     @FXML private TableColumn<OrdenServicio, Integer> colId;
@@ -196,5 +198,49 @@ public class GestionEquiposController {
         alerta.setHeaderText(null);
         alerta.setContentText(mensaje);
         alerta.showAndWait();
+    }
+    
+    @FXML
+    public void eliminarRegistro(ActionEvent event) {
+        // 1. Obtener la orden seleccionada en la tabla
+        OrdenServicio seleccionada = tblVistaTabla.getSelectionModel().getSelectedItem();
+        
+        if (seleccionada == null) {
+            mostrarAlerta("Selección Requerida", "Por favor, seleccione un registro de la tabla para poder eliminarlo.", AlertType.WARNING);
+            return;
+        }
+
+        // 2. Alerta de confirmación (Buenas prácticas de UX/UI)
+        Alert confirmacion = new Alert(AlertType.CONFIRMATION);
+        confirmacion.setTitle("Confirmar Eliminación");
+        confirmacion.setHeaderText(null);
+        confirmacion.setContentText("¿Está seguro de que desea eliminar por completo la Orden #" + seleccionada.getIdOrden() + "? Esta acción no se puede deshacer.");
+        
+        // Esperar la respuesta del usuario
+        java.util.Optional<javafx.scene.control.ButtonType> resultado = confirmacion.showAndWait();
+        if (resultado.isPresent() && resultado.get() == javafx.scene.control.ButtonType.OK) {
+            
+            // 3. Sentencia SQL para borrar físicamente el registro de la orden
+            String sql = "DELETE FROM ordenes_servicio WHERE id_orden = ?";
+            
+            try (Connection con = ConexionSQL.conectar();
+                 PreparedStatement ps = con.prepareStatement(sql)) {
+                
+                ps.setInt(1, seleccionada.getIdOrden());
+                ps.executeUpdate();
+                
+                System.out.println("🗑️ [Base de Datos] Orden #" + seleccionada.getIdOrden() + " eliminada con éxito.");
+                
+                // 4. Refrescar la interfaz eliminando el ítem de la lista visible directamente
+                listaOrdenes.remove(seleccionada);
+                
+                mostrarAlerta("Registro Eliminado", "La orden de servicio ha sido removida del sistema correctamente.", AlertType.INFORMATION);
+                
+            } catch (SQLException e) {
+                System.err.println("❌ Error SQL al intentar eliminar la orden: " + e.getMessage());
+                mostrarAlerta("Error de Servidor", "No se pudo eliminar el registro de la base de datos local.", AlertType.ERROR);
+                e.printStackTrace();
+            }
+        }
     }
 }

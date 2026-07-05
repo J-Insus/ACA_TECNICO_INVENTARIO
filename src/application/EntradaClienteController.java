@@ -21,6 +21,7 @@ public class EntradaClienteController {
     @FXML private TextField txtfieldCedula;
     @FXML private TextField txtfieldNombreCliente;
     @FXML private TextField txtfieldTelefono;
+    
 
     @FXML
     private void irDatosEquipo(ActionEvent event) {

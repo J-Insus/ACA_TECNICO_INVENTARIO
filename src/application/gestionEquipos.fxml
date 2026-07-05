@@ -24,11 +24,16 @@
                         <Font name="System Bold" size="40.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtfieldBuscar" prefHeight="42.0" prefWidth="300.0" promptText="Busca un equipo" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 8 15 8 15;;">
+                  <TextField fx:id="txtfieldBuscar" prefHeight="43.0" prefWidth="372.0" promptText="Busca un equipo" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-text-fill: #093C5D; -fx-padding: 8 15 8 15;;">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextField>
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#eliminarRegistro" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #093C5D; -fx-background-radius: 35; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 12 40 12 40;" text="Eliminar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
                <VBox.margin>
                   <Insets top="30.0" />
@@ -62,7 +67,7 @@
                   </CheckBox>
                </children>
             </HBox>
-            <TableView fx:id="tblVistaTabla" prefHeight="400.0" prefWidth="1100.0">
+            <TableView fx:id="tblVistaTabla" prefHeight="375.0" prefWidth="1280.0">
               <columns>
                 <TableColumn fx:id="colId" prefWidth="75.0" text="colId" />
                 <TableColumn fx:id="colNombre" prefWidth="75.0" text="Cliente" />
